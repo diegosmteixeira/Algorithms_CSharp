@@ -1,0 +1,10 @@
+﻿namespace Algorithms_CSharp
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Project created");
+        }
+    }
+}
