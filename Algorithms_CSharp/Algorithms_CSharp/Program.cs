@@ -14,7 +14,7 @@ namespace Algorithms_CSharp
             //4Kints Time taken:0:00:17.8734063
             //8Kints Time taken:0:02:24.635803
 
-            var ints = In.ReadInts("./Data/8Kints.txt").ToArray();
+            var ints = In.ReadInts("./Data/1Kints.txt").ToArray();
 
             //High resolution timer
             var watch = new Stopwatch();
@@ -26,6 +26,15 @@ namespace Algorithms_CSharp
 
             Console.WriteLine($"The number of \"zero-sum\" triplets:{triplets}");
             Console.WriteLine($"Time taken:{watch.Elapsed:g}");
+            Console.WriteLine();
+
+            ArrayFundamentals.ArraysDemo();
+            Console.WriteLine();
+            ArrayFundamentals.TestBasedArray();
+            Console.WriteLine();
+            ArrayFundamentals.JaggedArray();
+
+
         }
     }
 }
