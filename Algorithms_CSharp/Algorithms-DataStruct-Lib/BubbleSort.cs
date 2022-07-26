@@ -1,6 +1,6 @@
 ﻿namespace Algorithms_DataStruct_Lib
 {
-    public class BubbleSort
+    public class BubbleSort : Swap
     {
 
         //[In-place algorithm]:
@@ -30,23 +30,11 @@
                 {
                     if (array[i] > array[i + 1])
                     {
-                        Swap(array, i, i + 1);
+                        DoSwap(array, i, i + 1);
                     }
 
                 }
             }
         }
-
-        private static void Swap(int[] array, int i, int j)
-        {
-            if (i == j)
-                return;
-
-            int temp = array[i];
-            array[i] = array[j];
-            array[j] = temp;
-        }
-
-
     }
 }
