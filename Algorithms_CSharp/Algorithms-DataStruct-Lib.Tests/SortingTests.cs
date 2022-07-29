@@ -45,7 +45,7 @@ namespace Algorithms_DataStruct_Lib.Tests
         }
 
         [Test]
-        public void BubbleSort_ValidInput_SortedInput()
+        public void BubbleSort_ValidInput_SortedOutput()
         {
             RunTestsForSortAlgorithm(BubbleSort.Sort);
         }
@@ -54,6 +54,12 @@ namespace Algorithms_DataStruct_Lib.Tests
         public void SelectionSort_ValidInput_SortedOutput()
         {
             RunTestsForSortAlgorithm(SelectionSort.Sort);
+        }
+
+        [Test]
+        public void InsertionSort_ValidInput_SortedOutput()
+        {
+            RunTestsForSortAlgorithm(InsertionSort.Sort);
         }
     }
 }

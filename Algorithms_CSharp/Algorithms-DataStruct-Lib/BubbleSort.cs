@@ -26,14 +26,19 @@
         {
             for (int partIndex = array.Length - 1; partIndex > 0; partIndex--)
             {
+                bool swapped = false;
                 for (int i = 0; i < partIndex; i++)
                 {
                     if (array[i] > array[i + 1])
                     {
                         DoSwap(array, i, i + 1);
+                        swapped = true;
                     }
-
                 }
+
+                //prevents outer loop when inner loop don't change anything
+                //O(n) -- best case --
+                if (swapped == false) break;
             }
         }
     }
