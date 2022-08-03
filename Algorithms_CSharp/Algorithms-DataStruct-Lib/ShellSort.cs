@@ -14,9 +14,12 @@
         //pre-sorting easily mixes all the positions of all duplicate elements
 
         //[Running time complexity]
-        //Wrost: Quadratic O(n²) - Degrades quickly
-        //Average: Quadratic O(n²)
-        //Best: Quadratic O(n)
+        //The time complexity of Shell Sort depends on the gap sequence.
+        //Its best-case time complexity is O(n* logn) and the worst case is O(n*(log2n)²)
+
+        //Wrost: O(n(log2n)²)
+        //Average: O(n(log2n)²)
+        //Best: O(n(lo2gn))
 
         //---
 
