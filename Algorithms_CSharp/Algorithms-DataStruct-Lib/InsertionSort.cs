@@ -16,7 +16,7 @@
         //[Running time complexity]
         //Wrost: Quadratic O(n²) - Degrades quickly
         //Average: Quadratic O(n²)
-        //Best: Quadratic O(n)
+        //Best: Linear O(n)
 
         public static void Sort(int[] array)
         {

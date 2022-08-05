@@ -17,9 +17,9 @@
         //The time complexity of Shell Sort depends on the gap sequence.
         //Its best-case time complexity is O(n* logn) and the worst case is O(n*(log2n)²)
 
-        //Wrost: O(n(log2n)²)
-        //Average: O(n(log2n)²)
-        //Best: O(n(lo2gn))
+        //Wrost: O(n(logn)²)
+        //Average: O(n(logn)²)
+        //Best: O(n(logn))
 
         //---
 
