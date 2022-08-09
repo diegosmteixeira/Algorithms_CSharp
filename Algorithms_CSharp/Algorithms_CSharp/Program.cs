@@ -9,7 +9,7 @@ namespace Algorithms_CSharp
 
         static void Main(string[] args)
         {
-            ListDemo.Run();
+            ListDemo.ApiMembers();
 
             /*Time consumption doesn't grows linearly*/
             //1Kints Time taken:0:00:00.268237
