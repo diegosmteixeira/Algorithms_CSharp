@@ -9,6 +9,8 @@ namespace Algorithms_CSharp
 
         static void Main(string[] args)
         {
+            ListDemo.Run();
+
             /*Time consumption doesn't grows linearly*/
             //1Kints Time taken:0:00:00.268237
             //4Kints Time taken:0:00:17.8734063
@@ -24,6 +26,7 @@ namespace Algorithms_CSharp
 
             watch.Stop();
 
+            /*
             Console.WriteLine($"The number of \"zero-sum\" triplets:{triplets}");
             Console.WriteLine($"Time taken:{watch.Elapsed:g}");
             Console.WriteLine();
@@ -33,8 +36,9 @@ namespace Algorithms_CSharp
             ArrayFundamentals.TestBasedArray();
             Console.WriteLine();
             ArrayFundamentals.JaggedArray();
+            */
 
-
+            
         }
     }
 }
