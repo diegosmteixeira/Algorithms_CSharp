@@ -9,36 +9,57 @@ namespace Algorithms_CSharp
 
         static void Main(string[] args)
         {
-            ListDemo.ApiMembers();
+            Node first = new Node() { Value = 5};
+            Node second = new Node() { Value = 1};
 
-            /*Time consumption doesn't grows linearly*/
-            //1Kints Time taken:0:00:00.268237
-            //4Kints Time taken:0:00:17.8734063
-            //8Kints Time taken:0:02:24.635803
+            first.Next = second;
 
-            var ints = In.ReadInts("./Data/1Kints.txt").ToArray();
+            Node third = new Node() { Value = 3};
+            second.Next = third;
 
-            //High resolution timer
-            var watch = new Stopwatch();
-            watch.Start();
+            PrintOutLinkedList(first);
 
-            var triplets = ThreeSum.Count(ints);
-
-            watch.Stop();
-
-            /*
-            Console.WriteLine($"The number of \"zero-sum\" triplets:{triplets}");
-            Console.WriteLine($"Time taken:{watch.Elapsed:g}");
-            Console.WriteLine();
-
-            ArrayFundamentals.ArraysDemo();
-            Console.WriteLine();
-            ArrayFundamentals.TestBasedArray();
-            Console.WriteLine();
-            ArrayFundamentals.JaggedArray();
-            */
-
-            
+            Console.Read();
         }
+
+        private static void PrintOutLinkedList(Node node)
+        {
+            while(node != null)
+            {
+                Console.WriteLine(node.Value);
+                node = node.Next;
+            }
+        }
+
+
+        /*
+        //ListDemo.ApiMembers();
+
+        /*Time consumption doesn't grows linearly
+        //1Kints Time taken:0:00:00.268237
+        //4Kints Time taken:0:00:17.8734063
+        //8Kints Time taken:0:02:24.635803
+
+        var ints = In.ReadInts("./Data/1Kints.txt").ToArray();
+
+        //High resolution timer
+        var watch = new Stopwatch();
+        watch.Start();
+
+        var triplets = ThreeSum.Count(ints);
+
+        watch.Stop();
+
+        /*
+        Console.WriteLine($"The number of \"zero-sum\" triplets:{triplets}");
+        Console.WriteLine($"Time taken:{watch.Elapsed:g}");
+        Console.WriteLine();
+
+        ArrayFundamentals.ArraysDemo();
+        Console.WriteLine();
+        ArrayFundamentals.TestBasedArray();
+        Console.WriteLine();
+        ArrayFundamentals.JaggedArray();
+        */
     }
 }
