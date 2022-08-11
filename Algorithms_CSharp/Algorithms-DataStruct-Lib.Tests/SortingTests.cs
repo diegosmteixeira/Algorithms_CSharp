@@ -1,6 +1,4 @@
-﻿using System;
-using NUnit.Framework;
-using Algorithms_DataStruct_Lib;
+﻿using NUnit.Framework;
 
 namespace Algorithms_DataStruct_Lib.Tests
 {
