@@ -97,5 +97,29 @@ namespace Algorithms_DataStruct_Lib.Tests
             Assert.AreEqual(3, _list.Head.Value);
             Assert.AreEqual(2, _list.Tail.Value);
         }
+
+        [Test]
+        public void FindByIndex_CorrectState()
+        {
+            _list.AddFirst(1);
+            _list.AddFirst(2);
+            _list.AddFirst(3);
+            _list.AddFirst(4);
+
+            Assert.AreEqual(2, _list.FindByIndex(3).Value);
+            Assert.Throws<InvalidOperationException>(() => _list.FindByIndex(6));
+        }
+
+        [Test]
+        public void RemoveByIndex_CorrectState()
+        {
+            _list.AddFirst(1);
+            _list.AddFirst(2);
+            _list.AddFirst(3);
+            _list.AddFirst(4);
+
+            _list.RemoveByIndex(2);
+            Assert.AreEqual(2, _list.FindByIndex(2).Value);
+        }
     }
 }

@@ -24,8 +24,8 @@
          *  .Enumerate
          */
 
-        public DoublyLinkedNode<T>? Head { get; private set; }
-        public DoublyLinkedNode<T>? Tail { get; private set; }
+        public DoublyLinkedNode<T>? Head { get; set; }
+        public DoublyLinkedNode<T>? Tail { get; set; }
         public int Count { get; private set; }
         public bool IsEmpty => Count == 0;
 
@@ -119,7 +119,29 @@
 
             Count--;
         }
+    public DoublyLinkedNode<T> FindByIndex(int index)
+        {
+            if (IsEmpty)
+            {
+                throw new InvalidOperationException();
+            }
 
+            if (Count < index)
+            {
+                throw new InvalidOperationException();
+            }
+
+            var current = Head;
+
+            for (int i = 0; i < index; i++)
+            {
+                if (!current.Next.Equals(Tail))
+                {
+                    current = current.Next;
+                }
+            }
+            return current;
+        }
 
     }
 }

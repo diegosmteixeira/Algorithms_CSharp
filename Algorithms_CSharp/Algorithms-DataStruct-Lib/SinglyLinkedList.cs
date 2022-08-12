@@ -121,6 +121,79 @@
             Count--;
         }
 
+        public void RemoveByIndex(int index)
+        {
+            if (IsEmpty())
+            {
+                throw new InvalidOperationException();
+            }
+
+            if (Count < index)
+            {
+                throw new InvalidOperationException();
+            }
+
+            if (Count == 1)
+            {
+                Head = Tail = null;
+                Count--;
+            }
+
+            if (index == 0)
+            {
+                throw new InvalidOperationException("Index starts at 1, in this list");
+            }
+            if (index == 1)
+            {
+                Head = Head.Next;
+                Count--;
+            }
+            else if (index > 1)
+            {
+                var current = Head;
+
+                for (int i = 1; i < index-1; i++)
+                {
+                    current = current.Next;
+                }
+
+                var toDelete = Head;
+
+                for (int i = 1; i < index; i++)
+                {
+                    toDelete = toDelete.Next;
+                }
+
+                current.Next = null;
+                current.Next = toDelete.Next;
+                Count--;
+            }
+        }
+
+        public Node<T> FindByIndex(int index)
+        {
+            if (IsEmpty())
+            {
+                throw new InvalidOperationException();
+            }
+
+            if (Count < index)
+            {
+                throw new InvalidOperationException();
+            }
+
+            var current = Head;
+
+            for (int i = 0; i < index; i++)
+            {
+                if (!current.Next.Equals(Tail))
+                {
+                    current = current.Next;
+                }
+            }
+            return current;
+        }
+
         public bool IsEmpty() => Count == 0;
     }
 }

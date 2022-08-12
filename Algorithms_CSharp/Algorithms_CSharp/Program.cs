@@ -6,30 +6,60 @@ namespace Algorithms_CSharp
 {
     internal partial class Program
     {
-
         static void Main(string[] args)
         {
-            Node first = new Node() { Value = 5};
-            Node second = new Node() { Value = 1};
+            DoublyLinkedList<int> doublyList = new DoublyLinkedList<int>();
+            doublyList.AddFirst(1);
+            doublyList.AddFirst(2);
+            doublyList.AddFirst(3);
+            doublyList.AddFirst(4);
 
-            first.Next = second;
+            PrintOutDoublyLinkedList(doublyList.Head);
 
-            Node third = new Node() { Value = 3};
-            second.Next = third;
+            static void PrintOutDoublyLinkedList(DoublyLinkedNode<int> node)
+            {
+                while (node != null)
+                {
+                    Console.Write($"{node.Value} ");
+                    node = node.Next;
+                }
+            }
 
-            PrintOutLinkedList(first);
+            /*
+            SinglyLinkedList<int> list = new SinglyLinkedList<int>();
+
+
+            list.RemoveByIndex(1);
+            
+
+            PrintOutLinkedList(list.Head);
+
+            static void PrintOutLinkedList(Node<int> node)
+            {
+                while (node != null)
+                {
+                    Console.WriteLine(node.Value);
+                    node = node.Next;
+                }
+            }
+            */
 
             Console.Read();
         }
 
-        private static void PrintOutLinkedList(Node node)
-        {
-            while(node != null)
-            {
-                Console.WriteLine(node.Value);
-                node = node.Next;
-            }
-        }
+
+        /*
+        Node first = new Node() { Value = 5};
+        Node second = new Node() { Value = 1};
+
+        first.Next = second;
+
+        Node third = new Node() { Value = 3};
+        second.Next = third;
+        */
+
+
+
 
 
         /*
