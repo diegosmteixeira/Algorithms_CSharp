@@ -8,6 +8,26 @@ namespace Algorithms_CSharp
     {
         static void Main(string[] args)
         {
+            var stack = new ArrayStack<int>();
+
+            stack.Push(1);
+            stack.Push(2);
+            stack.Push(3);
+            stack.Push(4);
+
+            Console.WriteLine($"Shoud print out 4:{stack.Peek()}");
+            
+            stack.Pop();
+
+            Console.WriteLine($"Shoud print out 3:{stack.Peek()}");
+
+            Console.WriteLine("Iterave over stack.");
+            foreach (var i in stack)
+            {
+                Console.WriteLine(i);
+            }
+
+            /*
             DoublyLinkedList<int> doublyList = new DoublyLinkedList<int>();
             doublyList.AddFirst(1);
             doublyList.AddFirst(2);
@@ -24,6 +44,7 @@ namespace Algorithms_CSharp
                     node = node.Next;
                 }
             }
+            */
 
             /*
             SinglyLinkedList<int> list = new SinglyLinkedList<int>();
