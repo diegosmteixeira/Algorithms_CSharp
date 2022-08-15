@@ -73,6 +73,9 @@ namespace Algorithms_DataStruct_Lib
 
         public T Peek()
         {
+            if (IsEmpty)
+                throw new InvalidOperationException();
+
             return _items[Count - 1];
         }
 

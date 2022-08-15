@@ -1,6 +1,8 @@
-﻿namespace Algorithms_DataStruct_Lib
+﻿using System.Collections;
+
+namespace Algorithms_DataStruct_Lib
 {
-    public class SinglyLinkedList<T>
+    public class SinglyLinkedList<T> : IEnumerable<T>
     {
         /*
          *Linked List is abstract data type which allows to build chains of elements
@@ -195,5 +197,20 @@
         }
 
         public bool IsEmpty() => Count == 0;
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            Node<T> current = Head;
+            while (current != null)
+            {
+                yield return current.Value;
+                current = current.Next;
+            }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
     }
 }

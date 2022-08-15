@@ -8,7 +8,7 @@ namespace Algorithms_CSharp
     {
         static void Main(string[] args)
         {
-            var stack = new ArrayStack<int>();
+            var stack = new LinkedStack<int>();
 
             stack.Push(1);
             stack.Push(2);
