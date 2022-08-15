@@ -8,7 +8,34 @@ namespace Algorithms_CSharp
     {
         static void Main(string[] args)
         {
-            var stack = new LinkedStack<int>();
+
+            //System.Collections.Generic
+            /* [Stack Built-In .NET& General Characteristics]:
+             * 
+             *  - Built-In stack implementation is based on an array
+             *  
+             *  [Time Complexity influence]:
+             *  
+             *  - Peek() - O(1)
+             *  - Push() - O(N) when resizing, otherwise O(1)
+             *  
+             *  - All the search operations such as:
+             *      Contains, Find / FindLast - O(N) - have to traverse N elements
+             *  
+             *  - CopyTo() - O(N)
+             *  
+             *  - Clear() - O(N) : resets each element in an array to the elements type default value
+             *      reference types to null
+             *      value types to the default values (boolean to false, int and float to zero, etc)
+             * 
+             *  - TrimExcess() - O(N)
+             *      has effect only if less than 90% capacity is used
+             *      otherwise, it won't do anything
+             *      (trim capacity to actual length of the stack)
+             *  
+             */
+
+            var stack = new Stack<int>();
 
             stack.Push(1);
             stack.Push(2);
