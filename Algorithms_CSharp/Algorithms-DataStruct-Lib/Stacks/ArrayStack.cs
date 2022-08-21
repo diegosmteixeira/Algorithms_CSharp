@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace Algorithms_DataStruct_Lib
+namespace Algorithms_DataStruct_Lib.Stacks
 {
     public class ArrayStack<T> : IEnumerable<T>
     {
@@ -90,7 +90,7 @@ namespace Algorithms_DataStruct_Lib
              *  - null for strings and all reference types
             */
 
-            _items[--Count] = default(T);
+            _items[--Count] = default;
 
             //is equal to:
 
@@ -125,16 +125,16 @@ namespace Algorithms_DataStruct_Lib
                 _items = largerArray;
             }
             _items[Count++] = item;
-            
-                //is equal to:
 
-                //_items[Count] = item;
-                //Count++;
+            //is equal to:
+
+            //_items[Count] = item;
+            //Count++;
         }
 
         public IEnumerator<T> GetEnumerator()
         {
-            for(int i = Count - 1; i >= 0; i--)
+            for (int i = Count - 1; i >= 0; i--)
             {
                 yield return _items[i];
             };

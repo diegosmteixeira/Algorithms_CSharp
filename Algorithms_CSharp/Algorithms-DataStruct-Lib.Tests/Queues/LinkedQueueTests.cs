@@ -1,6 +1,7 @@
-﻿using NUnit.Framework;
+﻿using Algorithms_DataStruct_Lib.Queues;
+using NUnit.Framework;
 
-namespace Algorithms_DataStruct_Lib.Tests
+namespace Algorithms_DataStruct_Lib.Tests.Queues
 {
     [TestFixture]
     public class LinkedQueueTests

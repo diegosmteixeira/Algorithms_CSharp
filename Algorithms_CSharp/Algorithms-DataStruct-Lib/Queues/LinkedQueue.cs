@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace Algorithms_DataStruct_Lib
+namespace Algorithms_DataStruct_Lib.Queues
 {
     public class LinkedQueue<T> : IEnumerable<T>
     {
@@ -40,7 +40,7 @@ namespace Algorithms_DataStruct_Lib
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-           return GetEnumerator();
+            return GetEnumerator();
         }
     }
 }

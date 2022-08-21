@@ -1,9 +1,10 @@
-﻿using NUnit.Framework;
+﻿using Algorithms_DataStruct_Lib.Stacks;
+using NUnit.Framework;
 
-namespace Algorithms_DataStruct_Lib.Tests
+namespace Algorithms_DataStruct_Lib.Tests.Stacks
 {
     [TestFixture]
-    public class StackTests
+    public class ArrayStackTests
     {
         [Test]
         public void IsEmpty_EmptyStack_ReturnsTrue()
@@ -27,7 +28,7 @@ namespace Algorithms_DataStruct_Lib.Tests
         {
             var stack = new ArrayStack<int>();
 
-            Assert.Throws<InvalidOperationException>(() => 
+            Assert.Throws<InvalidOperationException>(() =>
             {
                 stack.Pop();
             });

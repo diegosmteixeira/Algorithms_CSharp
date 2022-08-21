@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace Algorithms_DataStruct_Lib
+namespace Algorithms_DataStruct_Lib.Queues
 {
     public class CircularQueue<T> : IEnumerable<T>
     {
@@ -48,7 +48,7 @@ namespace Algorithms_DataStruct_Lib
             if (Count == _queue.Length - 1)
             {
                 int countPriorResize = Count;
-                T[] newArray = new T[2*_queue.Length];
+                T[] newArray = new T[2 * _queue.Length];
 
                 Array.Copy(_queue, _head, newArray, 0, _queue.Length - _head);
                 Array.Copy(_queue, 0, newArray, _queue.Length - _head, _tail);
@@ -78,7 +78,7 @@ namespace Algorithms_DataStruct_Lib
                 throw new InvalidOperationException();
             }
 
-            _queue[_head++] = default(T);
+            _queue[_head++] = default;
 
             //If after remove, IsEmpty
             if (IsEmpty)
@@ -106,7 +106,7 @@ namespace Algorithms_DataStruct_Lib
             //if _head <= _tail - Queue is unwrapped
             if (_head <= _tail)
             {
-                for (int i =_head; i < _tail; i++)
+                for (int i = _head; i < _tail; i++)
                 {
                     yield return _queue[i];
                 }
@@ -118,7 +118,7 @@ namespace Algorithms_DataStruct_Lib
                 {
                     yield return _queue[i];
                 }
-                for (int i = 0; i < _tail; i++) 
+                for (int i = 0; i < _tail; i++)
                 {
                     yield return _queue[i];
                 }

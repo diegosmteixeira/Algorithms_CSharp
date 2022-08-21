@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Algorithms_CSharp", "Algori
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Algorithms-DataStruct-Lib", "Algorithms-DataStruct-Lib\Algorithms-DataStruct-Lib.csproj", "{1002BD40-F6BB-4BA2-BB18-8787E00F6E7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithms-DataStruct-Lib.Tests", "Algorithms-DataStruct-Lib.Tests\Algorithms-DataStruct-Lib.Tests.csproj", "{83914EE7-B605-4653-A25A-F0B31C35CECC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Algorithms-DataStruct-Lib.Tests", "Algorithms-DataStruct-Lib.Tests\Algorithms-DataStruct-Lib.Tests.csproj", "{83914EE7-B605-4653-A25A-F0B31C35CECC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

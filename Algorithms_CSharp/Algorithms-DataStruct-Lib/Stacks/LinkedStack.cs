@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace Algorithms_DataStruct_Lib
+namespace Algorithms_DataStruct_Lib.Stacks
 {
     public class LinkedStack<T> : IEnumerable<T>
     {

@@ -1,6 +1,7 @@
-﻿using NUnit.Framework;
+﻿using Algorithms_DataStruct_Lib.Stacks;
+using NUnit.Framework;
 
-namespace Algorithms_DataStruct_Lib.Tests
+namespace Algorithms_DataStruct_Lib.Tests.Stacks
 {
     [TestFixture]
     public class LinkedStackTests
@@ -27,7 +28,7 @@ namespace Algorithms_DataStruct_Lib.Tests
         {
             var stack = new LinkedStack<int>();
 
-            Assert.Throws<InvalidOperationException>(() => 
+            Assert.Throws<InvalidOperationException>(() =>
             {
                 stack.Pop();
             });

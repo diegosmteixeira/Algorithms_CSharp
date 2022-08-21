@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace Algorithms_DataStruct_Lib
+namespace Algorithms_DataStruct_Lib.Queues
 {
     public class ArrayQueue<T> : IEnumerable<T>
     {
@@ -88,7 +88,7 @@ namespace Algorithms_DataStruct_Lib
                 throw new InvalidOperationException();
             }
 
-            _queue[_head++] = default(T);
+            _queue[_head++] = default;
 
             if (IsEmpty)
             {
@@ -108,7 +108,7 @@ namespace Algorithms_DataStruct_Lib
 
         public IEnumerator<T> GetEnumerator()
         {
-            for(int i = _head; i < _tail; i++)
+            for (int i = _head; i < _tail; i++)
             {
                 yield return _queue[i];
             }
