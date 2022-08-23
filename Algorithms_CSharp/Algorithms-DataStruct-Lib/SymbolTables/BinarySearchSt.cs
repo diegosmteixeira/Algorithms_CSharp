@@ -1,5 +1,4 @@
 ﻿using Algorithms_DataStruct_Lib.Queues;
-using System;
 
 namespace Algorithms_DataStruct_Lib.SymbolTables
 {
@@ -297,7 +296,7 @@ namespace Algorithms_DataStruct_Lib.SymbolTables
             int low = Rank(left);
             int high = Rank(right);
 
-            for (int i = low; i <= high; i++)
+            for (int i = low; i < high; i++)
             {
                 q.Enqueue(_keys[i]);
             }
