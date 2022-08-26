@@ -102,5 +102,80 @@
             //(from the API persperctive)
             return Enumerable.Empty<T>(); 
         }
+
+        /*
+         * [Remove from a tree]:
+         * 
+         *  - [Node is a leaf] : just remove
+         *  
+         *  - [Node has one child] : take the child node and replace
+         *  
+         *  - [Node to be removed has two children] :
+         *  
+         *      
+         *       [ Case 1 ]: the replacement has no children
+         *          
+         *           take the max from left subtree and replace
+         *           (these guarantees the tree still balanced)
+         *           
+         *                      (or)
+         *                    
+         *           take the min from right subtree and replace
+         *           
+         *           
+         *       [ Case 2 ]: the replacement has left child
+         *       
+         *           take the max from left subtree and then
+         *           replace his position with his child
+         *           
+         *       [ Case 3 ]: the replacement has right children
+         *       
+         *           take the min from right subtree and then
+         *           replace his position with his child
+         *
+         */
+
+        public void Remove(T value)
+        {
+            //in case the node is the root
+            _root = Remove(_root, value);
+        }
+
+        //recursive method will return a node which will be assigned to the root
+        public TreeNode<T> Remove(TreeNode<T> subtreeRoot, T value)
+        {
+            if (subtreeRoot == null)
+            {
+                return null;
+            }
+
+            int compareTo = value.CompareTo(subtreeRoot.Value);
+
+            if (compareTo < 0)
+            {
+                subtreeRoot.Left = Remove(subtreeRoot.Left, value);
+            }
+            else if (compareTo > 0)
+            {
+                subtreeRoot.Right = Remove(subtreeRoot.Right, value);
+            }
+            else //we've found the value (compareTo is equal 0)
+            {
+                if (subtreeRoot.Left == null)
+                {
+                    return subtreeRoot.Right;
+                }
+                if (subtreeRoot.Right == null)
+                {
+                    return subtreeRoot.Left;
+                }
+
+                //in case node have two children
+                subtreeRoot.Value = subtreeRoot.Right.Min();
+                subtreeRoot.Right = Remove(subtreeRoot.Right, subtreeRoot.Value);
+            }
+
+            return subtreeRoot;
+        }
     }
 }
